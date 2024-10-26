@@ -6,30 +6,41 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8ED34B4E2CCD2B3000AA299C /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B402CCD2B3000AA299C /* GradientButton.swift */; };
+		8ED34B4F2CCD2B3000AA299C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B442CCD2B3000AA299C /* LogInViewController.swift */; };
+		8ED34B502CCD2B3000AA299C /* MissingCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B452CCD2B3000AA299C /* MissingCodeViewController.swift */; };
+		8ED34B512CCD2B3000AA299C /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B462CCD2B3000AA299C /* PasscodeViewController.swift */; };
+		8ED34B522CCD2B3000AA299C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B472CCD2B3000AA299C /* SignUpViewController.swift */; };
+		8ED34B532CCD2B3000AA299C /* StyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B482CCD2B3000AA299C /* StyleGuide.swift */; };
+		8ED34B542CCD2B3000AA299C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B492CCD2B3000AA299C /* UIColor.swift */; };
+		8ED34B552CCD2B3000AA299C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B4A2CCD2B3000AA299C /* WelcomeViewController.swift */; };
+		8ED34B562CCD2B3000AA299C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ED34B3F2CCD2B3000AA299C /* Assets.xcassets */; };
+		8ED34B582CCD2B3000AA299C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ED34B432CCD2B3000AA299C /* LaunchScreen.storyboard */; };
+		8ED34B612CCD2B4100AA299C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B5E2CCD2B4100AA299C /* AppDelegate.swift */; };
+		8ED34B622CCD2B4100AA299C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B5F2CCD2B4100AA299C /* SceneDelegate.swift */; };
+		8ED34B682CCD2BA800AA299C /* VerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B672CCD2BA800AA299C /* VerificationService.swift */; };
+		8ED34B6A2CCD2BB200AA299C /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B692CCD2BB200AA299C /* AccountService.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		8ED34AF92CCC5CB500AA299C /* sign-up-screen-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sign-up-screen-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ED34B3F2CCD2B3000AA299C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8ED34B402CCD2B3000AA299C /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		8ED34B412CCD2B3000AA299C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8ED34B422CCD2B3000AA299C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8ED34B442CCD2B3000AA299C /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		8ED34B452CCD2B3000AA299C /* MissingCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingCodeViewController.swift; sourceTree = "<group>"; };
+		8ED34B462CCD2B3000AA299C /* PasscodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
+		8ED34B472CCD2B3000AA299C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		8ED34B482CCD2B3000AA299C /* StyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuide.swift; sourceTree = "<group>"; };
+		8ED34B492CCD2B3000AA299C /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		8ED34B4A2CCD2B3000AA299C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		8ED34B5E2CCD2B4100AA299C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8ED34B5F2CCD2B4100AA299C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8ED34B672CCD2BA800AA299C /* VerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationService.swift; sourceTree = "<group>"; };
+		8ED34B692CCD2BB200AA299C /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		8ED34B0B2CCC5CB600AA299C /* Exceptions for "sign-up-screen-sample" folder in "sign-up-screen-sample" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 8ED34AF82CCC5CB500AA299C /* sign-up-screen-sample */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		8ED34AFB2CCC5CB500AA299C /* sign-up-screen-sample */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				8ED34B0B2CCC5CB600AA299C /* Exceptions for "sign-up-screen-sample" folder in "sign-up-screen-sample" target */,
-			);
-			path = "sign-up-screen-sample";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8ED34AF62CCC5CB500AA299C /* Frameworks */ = {
@@ -45,7 +56,7 @@
 		8ED34AF02CCC5CB500AA299C = {
 			isa = PBXGroup;
 			children = (
-				8ED34AFB2CCC5CB500AA299C /* sign-up-screen-sample */,
+				8ED34B4B2CCD2B3000AA299C /* sign-up-screen-sample */,
 				8ED34AFA2CCC5CB500AA299C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +67,68 @@
 				8ED34AF92CCC5CB500AA299C /* sign-up-screen-sample.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8ED34B4B2CCD2B3000AA299C /* sign-up-screen-sample */ = {
+			isa = PBXGroup;
+			children = (
+				8ED34B602CCD2B4100AA299C /* Delegates */,
+				8ED34B6B2CCD2BBC00AA299C /* Services */,
+				8ED34B662CCD2B6000AA299C /* ViewControllers */,
+				8ED34B652CCD2B5900AA299C /* Custom Views */,
+				8ED34B642CCD2B5100AA299C /* Extenstions */,
+				8ED34B3F2CCD2B3000AA299C /* Assets.xcassets */,
+				8ED34B412CCD2B3000AA299C /* Info.plist */,
+				8ED34B432CCD2B3000AA299C /* LaunchScreen.storyboard */,
+			);
+			path = "sign-up-screen-sample";
+			sourceTree = "<group>";
+		};
+		8ED34B602CCD2B4100AA299C /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				8ED34B5E2CCD2B4100AA299C /* AppDelegate.swift */,
+				8ED34B5F2CCD2B4100AA299C /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		8ED34B642CCD2B5100AA299C /* Extenstions */ = {
+			isa = PBXGroup;
+			children = (
+				8ED34B492CCD2B3000AA299C /* UIColor.swift */,
+			);
+			path = Extenstions;
+			sourceTree = "<group>";
+		};
+		8ED34B652CCD2B5900AA299C /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				8ED34B402CCD2B3000AA299C /* GradientButton.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		8ED34B662CCD2B6000AA299C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8ED34B4A2CCD2B3000AA299C /* WelcomeViewController.swift */,
+				8ED34B442CCD2B3000AA299C /* LogInViewController.swift */,
+				8ED34B452CCD2B3000AA299C /* MissingCodeViewController.swift */,
+				8ED34B462CCD2B3000AA299C /* PasscodeViewController.swift */,
+				8ED34B472CCD2B3000AA299C /* SignUpViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8ED34B6B2CCD2BBC00AA299C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8ED34B482CCD2B3000AA299C /* StyleGuide.swift */,
+				8ED34B692CCD2BB200AA299C /* AccountService.swift */,
+				8ED34B672CCD2BA800AA299C /* VerificationService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,9 +145,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				8ED34AFB2CCC5CB500AA299C /* sign-up-screen-sample */,
 			);
 			name = "sign-up-screen-sample";
 			packageProductDependencies = (
@@ -122,6 +192,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ED34B562CCD2B3000AA299C /* Assets.xcassets in Resources */,
+				8ED34B582CCD2B3000AA299C /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +204,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ED34B4E2CCD2B3000AA299C /* GradientButton.swift in Sources */,
+				8ED34B612CCD2B4100AA299C /* AppDelegate.swift in Sources */,
+				8ED34B622CCD2B4100AA299C /* SceneDelegate.swift in Sources */,
+				8ED34B4F2CCD2B3000AA299C /* LogInViewController.swift in Sources */,
+				8ED34B682CCD2BA800AA299C /* VerificationService.swift in Sources */,
+				8ED34B502CCD2B3000AA299C /* MissingCodeViewController.swift in Sources */,
+				8ED34B512CCD2B3000AA299C /* PasscodeViewController.swift in Sources */,
+				8ED34B522CCD2B3000AA299C /* SignUpViewController.swift in Sources */,
+				8ED34B532CCD2B3000AA299C /* StyleGuide.swift in Sources */,
+				8ED34B6A2CCD2BB200AA299C /* AccountService.swift in Sources */,
+				8ED34B542CCD2B3000AA299C /* UIColor.swift in Sources */,
+				8ED34B552CCD2B3000AA299C /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8ED34B432CCD2B3000AA299C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8ED34B422CCD2B3000AA299C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8ED34B0D2CCC5CB600AA299C /* Debug */ = {
