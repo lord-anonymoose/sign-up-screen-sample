@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8EA01B6C2CCDB02900693B90 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA01B6B2CCDB02900693B90 /* UIViewController.swift */; };
 		8ED34B4E2CCD2B3000AA299C /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B402CCD2B3000AA299C /* GradientButton.swift */; };
 		8ED34B4F2CCD2B3000AA299C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B442CCD2B3000AA299C /* LogInViewController.swift */; };
 		8ED34B502CCD2B3000AA299C /* MissingCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B452CCD2B3000AA299C /* MissingCodeViewController.swift */; };
@@ -21,14 +22,16 @@
 		8ED34B622CCD2B4100AA299C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B5F2CCD2B4100AA299C /* SceneDelegate.swift */; };
 		8ED34B682CCD2BA800AA299C /* VerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B672CCD2BA800AA299C /* VerificationService.swift */; };
 		8ED34B6A2CCD2BB200AA299C /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B692CCD2BB200AA299C /* AccountService.swift */; };
+		8ED34B712CCD3E9500AA299C /* FoundationExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B702CCD3E9500AA299C /* FoundationExt.swift */; };
+		8EEDF5552CCD442E0049AA00 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 8EEDF5542CCD442E0049AA00 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8EA01B6B2CCDB02900693B90 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		8ED34AF92CCC5CB500AA299C /* sign-up-screen-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sign-up-screen-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED34B3F2CCD2B3000AA299C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8ED34B402CCD2B3000AA299C /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		8ED34B412CCD2B3000AA299C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8ED34B422CCD2B3000AA299C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8ED34B442CCD2B3000AA299C /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		8ED34B452CCD2B3000AA299C /* MissingCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingCodeViewController.swift; sourceTree = "<group>"; };
 		8ED34B462CCD2B3000AA299C /* PasscodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +43,9 @@
 		8ED34B5F2CCD2B4100AA299C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8ED34B672CCD2BA800AA299C /* VerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationService.swift; sourceTree = "<group>"; };
 		8ED34B692CCD2BB200AA299C /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
+		8ED34B702CCD3E9500AA299C /* FoundationExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationExt.swift; sourceTree = "<group>"; };
+		8EEDF54B2CCD42DC0049AA00 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8EEDF5542CCD442E0049AA00 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				8ED34B492CCD2B3000AA299C /* UIColor.swift */,
+				8EA01B6B2CCDB02900693B90 /* UIViewController.swift */,
+				8ED34B702CCD3E9500AA299C /* FoundationExt.swift */,
+				8EEDF5542CCD442E0049AA00 /* Localizable.xcstrings */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -173,7 +182,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				ru,
 			);
 			mainGroup = 8ED34AF02CCC5CB500AA299C;
 			minimizedProjectReferenceProxies = 1;
@@ -194,6 +203,7 @@
 			files = (
 				8ED34B562CCD2B3000AA299C /* Assets.xcassets in Resources */,
 				8ED34B582CCD2B3000AA299C /* LaunchScreen.storyboard in Resources */,
+				8EEDF5552CCD442E0049AA00 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,12 +214,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EA01B6C2CCDB02900693B90 /* UIViewController.swift in Sources */,
 				8ED34B4E2CCD2B3000AA299C /* GradientButton.swift in Sources */,
 				8ED34B612CCD2B4100AA299C /* AppDelegate.swift in Sources */,
 				8ED34B622CCD2B4100AA299C /* SceneDelegate.swift in Sources */,
 				8ED34B4F2CCD2B3000AA299C /* LogInViewController.swift in Sources */,
 				8ED34B682CCD2BA800AA299C /* VerificationService.swift in Sources */,
 				8ED34B502CCD2B3000AA299C /* MissingCodeViewController.swift in Sources */,
+				8ED34B712CCD3E9500AA299C /* FoundationExt.swift in Sources */,
 				8ED34B512CCD2B3000AA299C /* PasscodeViewController.swift in Sources */,
 				8ED34B522CCD2B3000AA299C /* SignUpViewController.swift in Sources */,
 				8ED34B532CCD2B3000AA299C /* StyleGuide.swift in Sources */,
@@ -225,7 +237,7 @@
 		8ED34B432CCD2B3000AA299C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8ED34B422CCD2B3000AA299C /* Base */,
+				8EEDF54B2CCD42DC0049AA00 /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -306,6 +318,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -360,6 +373,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -369,6 +383,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -416,6 +431,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

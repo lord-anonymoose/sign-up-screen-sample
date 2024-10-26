@@ -22,19 +22,17 @@ class MissingCodeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupBackButton()
         addSubviews()
         setupConstraints()
     }
     
     
     // MARK: Private
-    private func setupUI() {
-        view.backgroundColor = StyleGuide.shared.backgroundColor
-    }
-    
-    
     private func addSubviews() {
+        let safeAreaGuide = view.safeAreaLayoutGuide
         
+        // Constraints that are provided in Figma design yet don't look good on real devices are commented and replaced
     }
     
     

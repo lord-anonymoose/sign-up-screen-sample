@@ -22,16 +22,15 @@ class LogInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupBackButton()
+        setNavigationBarTitle(String(localized: "Log In"))
         addSubviews()
         setupConstraints()
     }
     
+
     
     // MARK: Private
-    private func setupUI() {
-        view.backgroundColor = StyleGuide.shared.backgroundColor
-    }
-    
     
     private func addSubviews() {
         
@@ -39,6 +38,8 @@ class LogInViewController: UIViewController {
     
     
     private func setupConstraints() {
+        let safeAreaGuide = view.safeAreaLayoutGuide
         
+        // Constraints that are provided in Figma design yet don't look good on real devices are commented and replaced
     }
 }

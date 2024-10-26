@@ -21,7 +21,7 @@ class WelcomeViewController: UIViewController {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "SIS"
+        label.text = String(localized: "SIS")
         label.font = UIFont.systemFont(ofSize: 34, weight: .medium)
         label.textColor = .white
         label.textAlignment = .center
@@ -31,10 +31,8 @@ class WelcomeViewController: UIViewController {
     
     private lazy var mottoLabel: UILabel = {
         let label = UILabel()
-        label.text = "Choose your security"
-        
-        // Set font family, size, and weight
-        label.font = UIFont.systemFont(ofSize: 17, weight: .regular) // Use .regular for font-weight 400
+        label.text = String(localized: "Choose your security")
+        label.font = UIFont.systemFont(ofSize: 17, weight: .regular)
         label.textColor = UIColor(hex: "#E8E8E8") ?? .white
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -44,57 +42,89 @@ class WelcomeViewController: UIViewController {
     
     private lazy var loginButton: GradientButton = {
         let button = GradientButton()
-        button.setTitle("Log in with phone number", for: .normal)
+        button.setTitle(String(localized: "Log in with phone number"), for: .normal)
         
         if let customFont = UIFont(name: "Urbanist-Medium", size: 16) {
             button.titleLabel?.font = customFont
         } else {
             button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         }
+        
+        button.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         return button
     }()
     
     private lazy var noAccountLabel: UILabel = {
         let label = UILabel()
-        label.text = "Don't have an account?"
-        label.font = .preferredFont(forTextStyle: .caption1)
+        label.text = String(localized: "Don't have an account?")
+        
+        if let customFont = UIFont(name: "Urbanist-Medium", size: 14) {
+            label.font = customFont
+        } else {
+            label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        }
+
         label.textColor = .white
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
+    private lazy var signUpButton: UIButton = {
+        let button = UIButton()
+        
+        button.setTitle(String(localized: "Sign up"), for: .normal)
+        if let customFont = UIFont(name: "Urbanist-Medium", size: 16) {
+            button.titleLabel?.font = customFont
+        } else {
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        }
+                button.titleLabel?.textAlignment = .center
+        button.addTarget(self, action: #selector(signupButtonTapped), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     
     
     // MARK: Actions
+    @objc func loginButtonTapped() {
+        print("Login button tapped")
+        let loginViewController = LogInViewController()
+        navigationController?.pushViewController(loginViewController, animated: true)
+    }
     
+    @objc func signupButtonTapped() {
+        print("Signup button tapped")
+        let signupViewController = SignUpViewController()
+        navigationController?.pushViewController(signupViewController, animated: true)
+    }
     
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupBackButton()
         addSubviews()
         setupConstraints()
     }
     
     
     // MARK: Private
-    private func setupUI() {
-        view.backgroundColor = StyleGuide.shared.backgroundColor
-    }
-    
-    
     private func addSubviews() {
         view.addSubview(logoImageView)
         view.addSubview(titleLabel)
         view.addSubview(mottoLabel)
         view.addSubview(loginButton)
         view.addSubview(noAccountLabel)
+        view.addSubview(signUpButton)
     }
     
     
     private func setupConstraints() {
         let safeAreaGuide = view.safeAreaLayoutGuide
+        
+        // Constraints that are provided in Figma design yet don't look good on real devices are commented and replaced
         
         NSLayoutConstraint.activate([
             logoImageView.topAnchor.constraint(equalTo: safeAreaGuide.topAnchor, constant: 175),
@@ -126,10 +156,14 @@ class WelcomeViewController: UIViewController {
             loginButton.leadingAnchor.constraint(equalTo: safeAreaGuide.leadingAnchor, constant: 35),
             loginButton.trailingAnchor.constraint(equalTo: safeAreaGuide.trailingAnchor, constant: -35),
             
-            noAccountLabel.topAnchor.constraint(equalTo: safeAreaGuide.topAnchor, constant: 715),
+            signUpButton.bottomAnchor.constraint(equalTo: safeAreaGuide.bottomAnchor, constant: -25),
+            signUpButton.heightAnchor.constraint(equalToConstant: 40),
+            signUpButton.centerXAnchor.constraint(equalTo: safeAreaGuide.centerXAnchor),
+            
+            //noAccountLabel.topAnchor.constraint(equalTo: safeAreaGuide.topAnchor, constant: 715),
+            noAccountLabel.bottomAnchor.constraint(equalTo: signUpButton.topAnchor),
             noAccountLabel.heightAnchor.constraint(equalToConstant: 40),
             noAccountLabel.centerXAnchor.constraint(equalTo: safeAreaGuide.centerXAnchor)
-            
         ])
     }
 }
