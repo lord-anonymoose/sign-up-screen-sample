@@ -92,7 +92,7 @@ class WelcomeViewController: UIViewController {
     // MARK: Actions
     @objc func loginButtonTapped() {
         print("Login button tapped")
-        let loginViewController = LogInViewController()
+        let loginViewController = VerificationViewController(isRegistered: true)
         navigationController?.pushViewController(loginViewController, animated: true)
     }
     

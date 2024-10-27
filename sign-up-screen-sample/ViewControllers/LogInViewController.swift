@@ -14,7 +14,6 @@ class LogInViewController: UIViewController {
     // MARK: Subviews
     private lazy var gradientTextField: GradientTextField = {
         let textField = GradientTextField()
-        textField.placeholder = String(localized: "Email")
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -55,3 +54,5 @@ class LogInViewController: UIViewController {
         ])
     }
 }
+
+

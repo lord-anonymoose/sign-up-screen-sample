@@ -15,6 +15,7 @@
 		8E058FAC2CCE5CBD005ED9A9 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E058FAB2CCE5CBD005ED9A9 /* Poppins-Regular.ttf */; };
 		8E058FAE2CCE5FCF005ED9A9 /* Inter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E058FAD2CCE5FCF005ED9A9 /* Inter.ttf */; };
 		8E058FB02CCE674B005ED9A9 /* GradientTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E058FAF2CCE674B005ED9A9 /* GradientTextField.swift */; };
+		8E058FB22CCED9D5005ED9A9 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E058FB12CCED9D5005ED9A9 /* VerificationViewController.swift */; };
 		8EA01B6C2CCDB02900693B90 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA01B6B2CCDB02900693B90 /* UIViewController.swift */; };
 		8ED34B4E2CCD2B3000AA299C /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B402CCD2B3000AA299C /* GradientButton.swift */; };
 		8ED34B4F2CCD2B3000AA299C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B442CCD2B3000AA299C /* LogInViewController.swift */; };
@@ -44,6 +45,7 @@
 		8E058FAB2CCE5CBD005ED9A9 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		8E058FAD2CCE5FCF005ED9A9 /* Inter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inter.ttf; sourceTree = "<group>"; };
 		8E058FAF2CCE674B005ED9A9 /* GradientTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientTextField.swift; sourceTree = "<group>"; };
+		8E058FB12CCED9D5005ED9A9 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		8EA01B6B2CCDB02900693B90 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		8ED34AF92CCC5CB500AA299C /* sign-up-screen-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sign-up-screen-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED34B3F2CCD2B3000AA299C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				8ED34B452CCD2B3000AA299C /* MissingCodeViewController.swift */,
 				8ED34B462CCD2B3000AA299C /* PasscodeViewController.swift */,
 				8ED34B472CCD2B3000AA299C /* SignUpViewController.swift */,
+				8E058FB12CCED9D5005ED9A9 /* VerificationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				8ED34B712CCD3E9500AA299C /* FoundationExt.swift in Sources */,
 				8ED34B512CCD2B3000AA299C /* PasscodeViewController.swift in Sources */,
 				8ED34B522CCD2B3000AA299C /* SignUpViewController.swift in Sources */,
+				8E058FB22CCED9D5005ED9A9 /* VerificationViewController.swift in Sources */,
 				8ED34B532CCD2B3000AA299C /* StyleGuide.swift in Sources */,
 				8E058FAA2CCE4B6C005ED9A9 /* LabelWithPadding.swift in Sources */,
 				8ED34B6A2CCD2BB200AA299C /* AccountService.swift in Sources */,
