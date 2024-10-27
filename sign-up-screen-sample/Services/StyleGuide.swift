@@ -17,6 +17,7 @@ final class StyleGuide {
         
     }
     
-    let backgroundColor = UIColor(red: 0.04, green: 0.02, blue: 0.08, alpha: 1.00)
+    let backgroundColor = UIColor(hex: "#090615") ?? .systemBackground
+    let lightBlue = UIColor(hex: "#4CA2FF") ?? .systemBlue
 
 }

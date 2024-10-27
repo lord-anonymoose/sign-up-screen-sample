@@ -44,10 +44,10 @@ class WelcomeViewController: UIViewController {
         let button = GradientButton()
         button.setTitle(String(localized: "Log in with phone number"), for: .normal)
         
-        if let customFont = UIFont(name: "Urbanist-Medium", size: 16) {
+        if let customFont = UIFont(name: "Urbanist", size: 16) {
             button.titleLabel?.font = customFont
         } else {
-            button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         }
         
         button.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
@@ -58,10 +58,10 @@ class WelcomeViewController: UIViewController {
         let label = UILabel()
         label.text = String(localized: "Don't have an account?")
         
-        if let customFont = UIFont(name: "Urbanist-Medium", size: 14) {
+        if let customFont = UIFont(name: "Urbanist", size: 14) {
             label.font = customFont
         } else {
-            label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+            label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         }
 
         label.textColor = .white
@@ -74,12 +74,14 @@ class WelcomeViewController: UIViewController {
         let button = UIButton()
         
         button.setTitle(String(localized: "Sign up"), for: .normal)
-        if let customFont = UIFont(name: "Urbanist-Medium", size: 16) {
+        if let customFont = UIFont(name: "Urbanist", size: 14) {
             button.titleLabel?.font = customFont
         } else {
-            button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         }
-                button.titleLabel?.textAlignment = .center
+        button.titleLabel?.textAlignment = .center
+        button.titleLabel?.textColor = StyleGuide.shared.lightBlue
+        button.underlineText()
         button.addTarget(self, action: #selector(signupButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -157,12 +159,12 @@ class WelcomeViewController: UIViewController {
             loginButton.trailingAnchor.constraint(equalTo: safeAreaGuide.trailingAnchor, constant: -35),
             
             signUpButton.bottomAnchor.constraint(equalTo: safeAreaGuide.bottomAnchor, constant: -25),
-            signUpButton.heightAnchor.constraint(equalToConstant: 40),
+            signUpButton.heightAnchor.constraint(equalToConstant: 20),
             signUpButton.centerXAnchor.constraint(equalTo: safeAreaGuide.centerXAnchor),
             
             //noAccountLabel.topAnchor.constraint(equalTo: safeAreaGuide.topAnchor, constant: 715),
-            noAccountLabel.bottomAnchor.constraint(equalTo: signUpButton.topAnchor),
-            noAccountLabel.heightAnchor.constraint(equalToConstant: 40),
+            noAccountLabel.bottomAnchor.constraint(equalTo: signUpButton.topAnchor, constant: -10),
+            noAccountLabel.heightAnchor.constraint(equalToConstant: 20),
             noAccountLabel.centerXAnchor.constraint(equalTo: safeAreaGuide.centerXAnchor)
         ])
     }

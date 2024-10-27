@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E058FA02CCE3614005ED9A9 /* Urbanist.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E058F9F2CCE3614005ED9A9 /* Urbanist.ttf */; };
+		8E058FA22CCE361D005ED9A9 /* Urbanist-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E058FA12CCE361D005ED9A9 /* Urbanist-Italic.ttf */; };
+		8E058FA62CCE45E0005ED9A9 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E058FA52CCE45E0005ED9A9 /* UIButton.swift */; };
 		8EA01B6C2CCDB02900693B90 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA01B6B2CCDB02900693B90 /* UIViewController.swift */; };
 		8ED34B4E2CCD2B3000AA299C /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B402CCD2B3000AA299C /* GradientButton.swift */; };
 		8ED34B4F2CCD2B3000AA299C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B442CCD2B3000AA299C /* LogInViewController.swift */; };
@@ -27,6 +30,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E058F9F2CCE3614005ED9A9 /* Urbanist.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Urbanist.ttf; sourceTree = "<group>"; };
+		8E058FA12CCE361D005ED9A9 /* Urbanist-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Italic.ttf"; sourceTree = "<group>"; };
+		8E058FA42CCE38C5005ED9A9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8E058FA52CCE45E0005ED9A9 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		8EA01B6B2CCDB02900693B90 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		8ED34AF92CCC5CB500AA299C /* sign-up-screen-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sign-up-screen-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED34B3F2CCD2B3000AA299C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +66,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E058FA32CCE364A005ED9A9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8E058F9F2CCE3614005ED9A9 /* Urbanist.ttf */,
+				8E058FA12CCE361D005ED9A9 /* Urbanist-Italic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		8ED34AF02CCC5CB500AA299C = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +102,7 @@
 				8ED34B3F2CCD2B3000AA299C /* Assets.xcassets */,
 				8ED34B412CCD2B3000AA299C /* Info.plist */,
 				8ED34B432CCD2B3000AA299C /* LaunchScreen.storyboard */,
+				8E058FA32CCE364A005ED9A9 /* Fonts */,
 			);
 			path = "sign-up-screen-sample";
 			sourceTree = "<group>";
@@ -104,6 +121,7 @@
 			children = (
 				8ED34B492CCD2B3000AA299C /* UIColor.swift */,
 				8EA01B6B2CCDB02900693B90 /* UIViewController.swift */,
+				8E058FA52CCE45E0005ED9A9 /* UIButton.swift */,
 				8ED34B702CCD3E9500AA299C /* FoundationExt.swift */,
 				8EEDF5542CCD442E0049AA00 /* Localizable.xcstrings */,
 			);
@@ -202,6 +220,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ED34B562CCD2B3000AA299C /* Assets.xcassets in Resources */,
+				8E058FA22CCE361D005ED9A9 /* Urbanist-Italic.ttf in Resources */,
+				8E058FA02CCE3614005ED9A9 /* Urbanist.ttf in Resources */,
 				8ED34B582CCD2B3000AA299C /* LaunchScreen.storyboard in Resources */,
 				8EEDF5552CCD442E0049AA00 /* Localizable.xcstrings in Resources */,
 			);
@@ -219,6 +239,7 @@
 				8ED34B612CCD2B4100AA299C /* AppDelegate.swift in Sources */,
 				8ED34B622CCD2B4100AA299C /* SceneDelegate.swift in Sources */,
 				8ED34B4F2CCD2B3000AA299C /* LogInViewController.swift in Sources */,
+				8E058FA62CCE45E0005ED9A9 /* UIButton.swift in Sources */,
 				8ED34B682CCD2BA800AA299C /* VerificationService.swift in Sources */,
 				8ED34B502CCD2B3000AA299C /* MissingCodeViewController.swift in Sources */,
 				8ED34B712CCD3E9500AA299C /* FoundationExt.swift in Sources */,
@@ -238,6 +259,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8EEDF54B2CCD42DC0049AA00 /* en */,
+				8E058FA42CCE38C5005ED9A9 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
