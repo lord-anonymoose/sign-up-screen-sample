@@ -12,7 +12,12 @@ class LogInViewController: UIViewController {
     
     
     // MARK: Subviews
-    
+    private lazy var gradientTextField: GradientTextField = {
+        let textField = GradientTextField()
+        textField.placeholder = String(localized: "Email")
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        return textField
+    }()
     
     
     // MARK: Actions
@@ -33,7 +38,7 @@ class LogInViewController: UIViewController {
     // MARK: Private
     
     private func addSubviews() {
-        
+        view.addSubview(gradientTextField)
     }
     
     
@@ -41,5 +46,12 @@ class LogInViewController: UIViewController {
         let safeAreaGuide = view.safeAreaLayoutGuide
         
         // Constraints that are provided in Figma design yet don't look good on real devices are commented and replaced
+        NSLayoutConstraint.activate([
+            gradientTextField.centerXAnchor.constraint(equalTo: safeAreaGuide.centerXAnchor),
+            gradientTextField.centerYAnchor.constraint(equalTo: safeAreaGuide.centerYAnchor),
+            gradientTextField.heightAnchor.constraint(equalToConstant: 50),
+            gradientTextField.widthAnchor.constraint(equalToConstant: 50)
+            
+        ])
     }
 }

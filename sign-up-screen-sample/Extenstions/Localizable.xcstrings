@@ -33,6 +33,9 @@
         }
       }
     },
+    "Email" : {
+
+    },
     "Log In" : {
       "localizations" : {
         "ru" : {

@@ -33,14 +33,7 @@ final class GradientButton: UIButton {
     
     private func setupGradient() {
         gradientLayer.frame = self.bounds
-        gradientLayer.colors = [
-            UIColor(hex: "#9358F7")?.cgColor ?? UIColor.white.cgColor,
-            UIColor(hex: "#7B78F2")?.cgColor ?? UIColor.white.cgColor,
-            UIColor(hex: "#6197EE")?.cgColor ?? UIColor.white.cgColor,
-            UIColor(hex: "#45B5E9")?.cgColor ?? UIColor.white.cgColor,
-            UIColor(hex: "#10D7E2")?.cgColor ?? UIColor.white.cgColor,
-        ]
-        
+        gradientLayer.colors = StyleGuide.shared.CGGradientColors
         gradientLayer.startPoint = CGPoint(x: 0, y: 1)
         gradientLayer.endPoint = CGPoint(x: 1, y: 0)
         
