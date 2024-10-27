@@ -59,6 +59,39 @@
         }
       }
     },
+    "Missing code?" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не пришел код?"
+          }
+        }
+      }
+    },
+    "Missing code? \nContact our support team" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не пришел код? Обратитесь в чат поддержки"
+          }
+        }
+      }
+    },
+    "OK" : {
+
+    },
+    "Passcode" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Код приложения"
+          }
+        }
+      }
+    },
     "Proceed to the app" : {
       "localizations" : {
         "ru" : {
@@ -75,6 +108,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Зарегистрируйтесь сейчас"
+          }
+        }
+      }
+    },
+    "Sign Up" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зарегистрироваться"
           }
         }
       }

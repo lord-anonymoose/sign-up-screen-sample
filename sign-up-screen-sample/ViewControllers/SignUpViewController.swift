@@ -23,6 +23,7 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupBackButton()
+        setNavigationBarTitle(String(localized: "Sign Up"))
         addSubviews()
         setupConstraints()
     }

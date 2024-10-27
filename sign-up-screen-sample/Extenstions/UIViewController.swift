@@ -21,7 +21,7 @@ extension UIViewController {
     }
     
     func setupBackButton() {
-        let backImage = UIImage(systemName: "arrow.left")
+        let backImage = UIImage(systemName: "arrow.left")?.withTintColor(.white, renderingMode: .alwaysOriginal)
         self.navigationController?.navigationBar.backIndicatorImage = backImage
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
         
@@ -31,9 +31,15 @@ extension UIViewController {
     func setNavigationBarTitle(_ title: String) {
         self.navigationItem.title = title
         
+        var customFont = UIFont.systemFont(ofSize: 20, weight: .regular)
+        
+        if let urbanistFont = UIFont(name: "Urbanist-Regular", size: 20) {
+            customFont = urbanistFont
+        }
+        
         self.navigationController?.navigationBar.titleTextAttributes = [
             .foregroundColor: UIColor.white,
-            .font: UIFont.systemFont(ofSize: 17, weight: .semibold)
+            .font: customFont
         ]
     }
 }

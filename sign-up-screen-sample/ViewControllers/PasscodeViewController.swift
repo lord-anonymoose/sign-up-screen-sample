@@ -23,6 +23,7 @@ class PasscodeViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupBackButton()
+        setNavigationBarTitle(String(localized: "Passcode"))
         addSubviews()
         setupConstraints()
     }
