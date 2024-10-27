@@ -10,7 +10,8 @@ import UIKit
 class VerificationViewController: UIViewController {
 
     private var isRegistered: Bool
-    
+    private var timer: Timer?
+    var timeLeft: Int = 20
     
     // MARK: Subviews
     private lazy var titleLabel: UILabel = {
@@ -42,6 +43,21 @@ class VerificationViewController: UIViewController {
         return label
     }()
     
+    private lazy var countdownLabel: UILabel = {
+        let label = UILabel()
+        label.text = String(localized: "You can request a new code in \(timeLeft.secondsToTime)")
+        if let customFont = UIFont(name: "Inter", size: 16) {
+            label.font = customFont
+        } else {
+            label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        }
+        label.textColor = .white
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     private lazy var gradientTextField: GradientTextField = {
         let textField = GradientTextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -50,8 +66,10 @@ class VerificationViewController: UIViewController {
     
     private lazy var gradientTextFields: [GradientTextField] = (0...5).map { _ in GradientTextField() }
     
-    // MARK: Actions
     
+    
+    // MARK: Actions
+
     
     // MARK: Lifecycle
     init(isRegistered: Bool) {
@@ -75,8 +93,13 @@ class VerificationViewController: UIViewController {
         addSubviews()
         setupConstraints()
         setupDelegates()
+        startTimer()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        stopTimer()
+    }
 
     
     // MARK: Private
@@ -84,6 +107,7 @@ class VerificationViewController: UIViewController {
     private func addSubviews() {
         view.addSubview(titleLabel)
         view.addSubview(subtitleLabel)
+        view.addSubview(countdownLabel)
         for textField in gradientTextFields {
             view.addSubview(textField)
         }
@@ -100,10 +124,16 @@ class VerificationViewController: UIViewController {
             titleLabel.trailingAnchor.constraint(equalTo: safeAreaGuide.trailingAnchor, constant: -116),
             
             //subtitleLabel.topAnchor.constraint(equalTo: safeAreaGuide.topAnchor, constant: 216.2),
-            subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
+            subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 25),
             subtitleLabel.heightAnchor.constraint(equalToConstant: 39.5),
             subtitleLabel.leadingAnchor.constraint(equalTo: safeAreaGuide.leadingAnchor, constant: 107.68),
-            subtitleLabel.trailingAnchor.constraint(equalTo: safeAreaGuide.trailingAnchor, constant: -107.68)
+            subtitleLabel.trailingAnchor.constraint(equalTo: safeAreaGuide.trailingAnchor, constant: -107.68),
+            
+            //countdownLabel.topAnchor.constraint(equalTo: safeAreaGuide.topAnchor, constant: 291),
+            countdownLabel.topAnchor.constraint(equalTo: subtitleLabel.bottomAnchor, constant: 50),
+            countdownLabel.heightAnchor.constraint(equalToConstant: 50),
+            countdownLabel.leadingAnchor.constraint(equalTo: safeAreaGuide.leadingAnchor, constant: 108),
+            countdownLabel.trailingAnchor.constraint(equalTo: safeAreaGuide.trailingAnchor, constant: -108)
         ])
         
         let sidePadding: CGFloat = 20
@@ -133,6 +163,22 @@ class VerificationViewController: UIViewController {
         for gradientTextField in gradientTextFields {
             gradientTextField.delegate = self
         }
+    }
+    
+    func startTimer() {
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [unowned self] timer in
+            if timeLeft > 0 {
+                timeLeft -= 1
+                countdownLabel.text = String(localized: "You can request a new code in \(timeLeft.secondsToTime)")
+            } else {
+                stopTimer()
+            }
+        }
+    }
+    
+    func stopTimer() {
+        timer?.invalidate()
+        timer = nil
     }
 }
 

@@ -165,6 +165,16 @@
         }
       }
     },
+    "You can request a new code in %@" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Запросить код можно через %@"
+          }
+        }
+      }
+    },
     "You have successfully created code for the application" : {
       "localizations" : {
         "ru" : {
