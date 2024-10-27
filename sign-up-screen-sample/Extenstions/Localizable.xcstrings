@@ -59,12 +59,22 @@
         }
       }
     },
+    "Proceed to the app" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Войти в приложение"
+          }
+        }
+      }
+    },
     "Sign up" : {
       "localizations" : {
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Зарегистрироваться"
+            "value" : "Зарегистрируйтесь сейчас"
           }
         }
       }
@@ -81,6 +91,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "SIS"
+          }
+        }
+      }
+    },
+    "You have successfully created code for the application" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вы успешно создали код приложения"
           }
         }
       }

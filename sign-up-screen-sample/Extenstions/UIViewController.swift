@@ -12,6 +12,10 @@ import UIKit
 
 extension UIViewController {
     
+    func hideNavigationBar() {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
     func setupUI() {
         view.backgroundColor = StyleGuide.shared.backgroundColor
     }

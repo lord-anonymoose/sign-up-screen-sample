@@ -44,7 +44,7 @@ class WelcomeViewController: UIViewController {
         let button = GradientButton()
         button.setTitle(String(localized: "Log in with phone number"), for: .normal)
         
-        if let customFont = UIFont(name: "Urbanist", size: 16) {
+        if let customFont = UIFont(name: "Urbanist-Regular", size: 16) {
             button.titleLabel?.font = customFont
         } else {
             button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
@@ -58,7 +58,7 @@ class WelcomeViewController: UIViewController {
         let label = UILabel()
         label.text = String(localized: "Don't have an account?")
         
-        if let customFont = UIFont(name: "Urbanist", size: 14) {
+        if let customFont = UIFont(name: "Urbanist-Regular", size: 14) {
             label.font = customFont
         } else {
             label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
@@ -74,7 +74,7 @@ class WelcomeViewController: UIViewController {
         let button = UIButton()
         
         button.setTitle(String(localized: "Sign up"), for: .normal)
-        if let customFont = UIFont(name: "Urbanist", size: 14) {
+        if let customFont = UIFont(name: "Urbanist-Regular", size: 14) {
             button.titleLabel?.font = customFont
         } else {
             button.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .regular)

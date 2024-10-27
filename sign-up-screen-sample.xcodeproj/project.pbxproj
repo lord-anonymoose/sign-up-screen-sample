@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E058FA02CCE3614005ED9A9 /* Urbanist.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E058F9F2CCE3614005ED9A9 /* Urbanist.ttf */; };
+		8E058FA02CCE3614005ED9A9 /* Urbanist-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E058F9F2CCE3614005ED9A9 /* Urbanist-Regular.ttf */; };
 		8E058FA22CCE361D005ED9A9 /* Urbanist-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E058FA12CCE361D005ED9A9 /* Urbanist-Italic.ttf */; };
 		8E058FA62CCE45E0005ED9A9 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E058FA52CCE45E0005ED9A9 /* UIButton.swift */; };
+		8E058FA82CCE47F2005ED9A9 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E058FA72CCE47F2005ED9A9 /* SuccessViewController.swift */; };
+		8E058FAA2CCE4B6C005ED9A9 /* LabelWithPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E058FA92CCE4B6C005ED9A9 /* LabelWithPadding.swift */; };
+		8E058FAC2CCE5CBD005ED9A9 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E058FAB2CCE5CBD005ED9A9 /* Poppins-Regular.ttf */; };
 		8EA01B6C2CCDB02900693B90 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA01B6B2CCDB02900693B90 /* UIViewController.swift */; };
 		8ED34B4E2CCD2B3000AA299C /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B402CCD2B3000AA299C /* GradientButton.swift */; };
 		8ED34B4F2CCD2B3000AA299C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B442CCD2B3000AA299C /* LogInViewController.swift */; };
@@ -30,10 +33,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8E058F9F2CCE3614005ED9A9 /* Urbanist.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Urbanist.ttf; sourceTree = "<group>"; };
+		8E058F9F2CCE3614005ED9A9 /* Urbanist-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Regular.ttf"; sourceTree = "<group>"; };
 		8E058FA12CCE361D005ED9A9 /* Urbanist-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Italic.ttf"; sourceTree = "<group>"; };
 		8E058FA42CCE38C5005ED9A9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E058FA52CCE45E0005ED9A9 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		8E058FA72CCE47F2005ED9A9 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
+		8E058FA92CCE4B6C005ED9A9 /* LabelWithPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithPadding.swift; sourceTree = "<group>"; };
+		8E058FAB2CCE5CBD005ED9A9 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		8EA01B6B2CCDB02900693B90 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		8ED34AF92CCC5CB500AA299C /* sign-up-screen-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sign-up-screen-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED34B3F2CCD2B3000AA299C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,7 +75,8 @@
 		8E058FA32CCE364A005ED9A9 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				8E058F9F2CCE3614005ED9A9 /* Urbanist.ttf */,
+				8E058F9F2CCE3614005ED9A9 /* Urbanist-Regular.ttf */,
+				8E058FAB2CCE5CBD005ED9A9 /* Poppins-Regular.ttf */,
 				8E058FA12CCE361D005ED9A9 /* Urbanist-Italic.ttf */,
 			);
 			path = Fonts;
@@ -132,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				8ED34B402CCD2B3000AA299C /* GradientButton.swift */,
+				8E058FA92CCE4B6C005ED9A9 /* LabelWithPadding.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -141,6 +149,7 @@
 			children = (
 				8ED34B4A2CCD2B3000AA299C /* WelcomeViewController.swift */,
 				8ED34B442CCD2B3000AA299C /* LogInViewController.swift */,
+				8E058FA72CCE47F2005ED9A9 /* SuccessViewController.swift */,
 				8ED34B452CCD2B3000AA299C /* MissingCodeViewController.swift */,
 				8ED34B462CCD2B3000AA299C /* PasscodeViewController.swift */,
 				8ED34B472CCD2B3000AA299C /* SignUpViewController.swift */,
@@ -221,7 +230,8 @@
 			files = (
 				8ED34B562CCD2B3000AA299C /* Assets.xcassets in Resources */,
 				8E058FA22CCE361D005ED9A9 /* Urbanist-Italic.ttf in Resources */,
-				8E058FA02CCE3614005ED9A9 /* Urbanist.ttf in Resources */,
+				8E058FA02CCE3614005ED9A9 /* Urbanist-Regular.ttf in Resources */,
+				8E058FAC2CCE5CBD005ED9A9 /* Poppins-Regular.ttf in Resources */,
 				8ED34B582CCD2B3000AA299C /* LaunchScreen.storyboard in Resources */,
 				8EEDF5552CCD442E0049AA00 /* Localizable.xcstrings in Resources */,
 			);
@@ -246,8 +256,10 @@
 				8ED34B512CCD2B3000AA299C /* PasscodeViewController.swift in Sources */,
 				8ED34B522CCD2B3000AA299C /* SignUpViewController.swift in Sources */,
 				8ED34B532CCD2B3000AA299C /* StyleGuide.swift in Sources */,
+				8E058FAA2CCE4B6C005ED9A9 /* LabelWithPadding.swift in Sources */,
 				8ED34B6A2CCD2BB200AA299C /* AccountService.swift in Sources */,
 				8ED34B542CCD2B3000AA299C /* UIColor.swift in Sources */,
+				8E058FA82CCE47F2005ED9A9 /* SuccessViewController.swift in Sources */,
 				8ED34B552CCD2B3000AA299C /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
