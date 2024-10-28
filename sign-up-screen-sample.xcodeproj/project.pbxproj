@@ -24,7 +24,7 @@
 		8ED34B4E2CCD2B3000AA299C /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B402CCD2B3000AA299C /* GradientButton.swift */; };
 		8ED34B502CCD2B3000AA299C /* MissingCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B452CCD2B3000AA299C /* MissingCodeViewController.swift */; };
 		8ED34B512CCD2B3000AA299C /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B462CCD2B3000AA299C /* PasscodeViewController.swift */; };
-		8ED34B522CCD2B3000AA299C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B472CCD2B3000AA299C /* SignUpViewController.swift */; };
+		8ED34B522CCD2B3000AA299C /* EnterPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B472CCD2B3000AA299C /* EnterPhoneViewController.swift */; };
 		8ED34B532CCD2B3000AA299C /* StyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B482CCD2B3000AA299C /* StyleGuide.swift */; };
 		8ED34B542CCD2B3000AA299C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B492CCD2B3000AA299C /* UIColor.swift */; };
 		8ED34B552CCD2B3000AA299C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B4A2CCD2B3000AA299C /* WelcomeViewController.swift */; };
@@ -32,7 +32,6 @@
 		8ED34B582CCD2B3000AA299C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ED34B432CCD2B3000AA299C /* LaunchScreen.storyboard */; };
 		8ED34B612CCD2B4100AA299C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B5E2CCD2B4100AA299C /* AppDelegate.swift */; };
 		8ED34B622CCD2B4100AA299C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B5F2CCD2B4100AA299C /* SceneDelegate.swift */; };
-		8ED34B682CCD2BA800AA299C /* VerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B672CCD2BA800AA299C /* VerificationService.swift */; };
 		8ED34B6A2CCD2BB200AA299C /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B692CCD2BB200AA299C /* AccountService.swift */; };
 		8ED34B712CCD3E9500AA299C /* FoundationExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B702CCD3E9500AA299C /* FoundationExt.swift */; };
 		8EEDF5552CCD442E0049AA00 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 8EEDF5542CCD442E0049AA00 /* Localizable.xcstrings */; };
@@ -59,13 +58,12 @@
 		8ED34B412CCD2B3000AA299C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8ED34B452CCD2B3000AA299C /* MissingCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingCodeViewController.swift; sourceTree = "<group>"; };
 		8ED34B462CCD2B3000AA299C /* PasscodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
-		8ED34B472CCD2B3000AA299C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		8ED34B472CCD2B3000AA299C /* EnterPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneViewController.swift; sourceTree = "<group>"; };
 		8ED34B482CCD2B3000AA299C /* StyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuide.swift; sourceTree = "<group>"; };
 		8ED34B492CCD2B3000AA299C /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		8ED34B4A2CCD2B3000AA299C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		8ED34B5E2CCD2B4100AA299C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8ED34B5F2CCD2B4100AA299C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8ED34B672CCD2BA800AA299C /* VerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationService.swift; sourceTree = "<group>"; };
 		8ED34B692CCD2BB200AA299C /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		8ED34B702CCD3E9500AA299C /* FoundationExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationExt.swift; sourceTree = "<group>"; };
 		8EEDF54B2CCD42DC0049AA00 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -165,11 +163,11 @@
 			isa = PBXGroup;
 			children = (
 				8ED34B4A2CCD2B3000AA299C /* WelcomeViewController.swift */,
+				8ED34B472CCD2B3000AA299C /* EnterPhoneViewController.swift */,
+				8E058FB12CCED9D5005ED9A9 /* VerificationViewController.swift */,
 				8E058FA72CCE47F2005ED9A9 /* SuccessViewController.swift */,
 				8ED34B452CCD2B3000AA299C /* MissingCodeViewController.swift */,
 				8ED34B462CCD2B3000AA299C /* PasscodeViewController.swift */,
-				8ED34B472CCD2B3000AA299C /* SignUpViewController.swift */,
-				8E058FB12CCED9D5005ED9A9 /* VerificationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -179,7 +177,6 @@
 			children = (
 				8ED34B482CCD2B3000AA299C /* StyleGuide.swift */,
 				8ED34B692CCD2BB200AA299C /* AccountService.swift */,
-				8ED34B672CCD2BA800AA299C /* VerificationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -273,13 +270,12 @@
 				8E058FB42CD00C13005ED9A9 /* GradientSecureTextField.swift in Sources */,
 				8ED34B622CCD2B4100AA299C /* SceneDelegate.swift in Sources */,
 				8E058FA62CCE45E0005ED9A9 /* UIButton.swift in Sources */,
-				8ED34B682CCD2BA800AA299C /* VerificationService.swift in Sources */,
 				8ED34B502CCD2B3000AA299C /* MissingCodeViewController.swift in Sources */,
 				8ED34B712CCD3E9500AA299C /* FoundationExt.swift in Sources */,
 				8E60AB622CD01A6F006B5363 /* GradientBorderedButton.swift in Sources */,
 				8ED34B512CCD2B3000AA299C /* PasscodeViewController.swift in Sources */,
 				8E058FB62CD00D38005ED9A9 /* GradientPicker.swift in Sources */,
-				8ED34B522CCD2B3000AA299C /* SignUpViewController.swift in Sources */,
+				8ED34B522CCD2B3000AA299C /* EnterPhoneViewController.swift in Sources */,
 				8E058FB22CCED9D5005ED9A9 /* VerificationViewController.swift in Sources */,
 				8ED34B532CCD2B3000AA299C /* StyleGuide.swift in Sources */,
 				8E058FAA2CCE4B6C005ED9A9 /* LabelWithPadding.swift in Sources */,

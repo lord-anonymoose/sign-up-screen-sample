@@ -92,14 +92,14 @@ class WelcomeViewController: UIViewController {
     
     // MARK: Actions
     @objc func loginButtonTapped() {
-        let loginViewController = VerificationViewController(isRegistered: true)
-        navigationController?.pushViewController(loginViewController, animated: true)
+        let viewController = EnterPhoneViewController(isRegistered: true)
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     @objc func signupButtonTapped() {
         print("Signup button tapped")
-        let signupViewController = SignUpViewController()
-        navigationController?.pushViewController(signupViewController, animated: true)
+        let viewController = EnterPhoneViewController(isRegistered: false)
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     // MARK: Lifecycle

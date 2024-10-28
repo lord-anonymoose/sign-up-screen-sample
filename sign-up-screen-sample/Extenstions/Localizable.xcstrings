@@ -2,7 +2,20 @@
   "sourceLanguage" : "en",
   "strings" : {
     "Choose an Option" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose an Option"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбрать"
+          }
+        }
+      }
     },
     "Choose your security" : {
       "localizations" : {
@@ -38,6 +51,12 @@
     },
     "Enter a code from SMS" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter a code from SMS"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -46,8 +65,17 @@
         }
       }
     },
+    "Get code" : {
+
+    },
     "I didn't get a code!" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I didn't get a code!"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -58,6 +86,12 @@
     },
     "Log In" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Log In"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -84,6 +118,12 @@
     },
     "Missing code?" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Missing code?"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -94,6 +134,12 @@
     },
     "Missing code? \nContact our support team" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Missing code? \nContact our support team"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -104,6 +150,12 @@
     },
     "OK" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -114,6 +166,12 @@
     },
     "Passcode" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passcode"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -122,8 +180,30 @@
         }
       }
     },
+    "Phone number" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phone Number"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Номер телефона"
+          }
+        }
+      }
+    },
     "Proceed to the app" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Proceed to the app"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -134,6 +214,12 @@
     },
     "Request new code" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Request new code"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -144,6 +230,12 @@
     },
     "Sign up" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign up"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -154,6 +246,12 @@
     },
     "Sign Up" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign Up"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -180,6 +278,12 @@
     },
     "Verification" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verification"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -190,6 +294,12 @@
     },
     "You can request a new code in %@" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can request a new code in %@"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -200,10 +310,32 @@
     },
     "You have successfully created code for the application" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You have successfully created code for the application"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Вы успешно создали код приложения"
+          }
+        }
+      }
+    },
+    "You will get an SMS with confirmation code" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You will get an SMS with confirmation code"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Код придет на ваш номер телефона"
           }
         }
       }
