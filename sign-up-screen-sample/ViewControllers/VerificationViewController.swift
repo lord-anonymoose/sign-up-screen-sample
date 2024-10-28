@@ -89,7 +89,12 @@ class VerificationViewController: UIViewController {
         return textField
     }()
     
-    private lazy var gradientTextFields: [GradientTextField] = (0...5).map { _ in GradientTextField() }
+    private lazy var gradientTextFields: [GradientTextField] = (0...5).map { _ in
+        let textField = GradientTextField()
+        textField.font = UIFont(name: "Inter", size: 22.24) ?? UIFont.systemFont(ofSize: 22.24, weight: .regular)
+        textField.textColor = .white
+        return textField
+    }
     
     private lazy var proceedButton: GradientButton = {
         let button = GradientButton()
@@ -160,6 +165,7 @@ class VerificationViewController: UIViewController {
         } else {
             setNavigationBarTitle(String(localized: "Sign Up"))
         }
+        setupTextFieldTags()
         addSubviews()
         setupConstraints()
         setupDelegates()
@@ -173,6 +179,11 @@ class VerificationViewController: UIViewController {
 
     
     // MARK: Private
+    private func setupTextFieldTags() {
+        for (index, textField) in gradientTextFields.enumerated() {
+            textField.tag = index + 1
+        }
+    }
     
     private func addSubviews() {
         view.addSubview(titleLabel)
@@ -290,11 +301,22 @@ extension VerificationViewController: UITextFieldDelegate {
         guard allowedCharacters.isSuperset(of: characterSet) else {
             return false
         }
+        
         let currentText = textField.text ?? ""
         guard let stringRange = Range(range, in: currentText) else { return false }
         let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
-        print("Action happens")
-        return updatedText.count <= 1
+        
+        if updatedText.count == 1 {
+            textField.text = updatedText
+            let nextTag = textField.tag + 1
+            if let nextTextField = view.viewWithTag(nextTag) as? UITextField {
+                nextTextField.becomeFirstResponder()
+            } else {
+                textField.resignFirstResponder()
+            }
+            return false
+        }
+        return updatedText.isEmpty
     }
 }
 
