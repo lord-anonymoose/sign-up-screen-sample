@@ -7,9 +7,11 @@
 
 import UIKit
 
+
+
 class WelcomeViewController: UIViewController {
 
-    
+
     
     // MARK: Subviews
     private lazy var logoImageView: UIImageView = {
@@ -37,8 +39,7 @@ class WelcomeViewController: UIViewController {
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
-    }()
-    
+    }()    
     
     private lazy var loginButton: GradientButton = {
         let button = GradientButton()
@@ -91,7 +92,6 @@ class WelcomeViewController: UIViewController {
     
     // MARK: Actions
     @objc func loginButtonTapped() {
-        print("Login button tapped")
         let loginViewController = VerificationViewController(isRegistered: true)
         navigationController?.pushViewController(loginViewController, animated: true)
     }

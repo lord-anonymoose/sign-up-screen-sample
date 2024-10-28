@@ -9,9 +9,14 @@ import UIKit
 
 class VerificationViewController: UIViewController {
 
+    
+    
+    // MARK: - Properties
     private var isRegistered: Bool
     private var timer: Timer?
-    var timeLeft: Int = 20
+    var timeLeft: Int = 10
+    
+    
     
     // MARK: Subviews
     private lazy var titleLabel: UILabel = {
@@ -58,6 +63,26 @@ class VerificationViewController: UIViewController {
         return label
     }()
     
+    private lazy var requestCodeButton: UIButton = {
+        let button = UIButton()
+        
+        button.setTitle(String(localized: "Request new code"), for: .normal)
+        if let customFont = UIFont(name: "Inter", size: 16) {
+            button.titleLabel?.font = customFont
+        } else {
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        }
+        button.titleLabel?.textAlignment = .center
+        button.titleLabel?.numberOfLines = 0
+        button.titleLabel?.textColor = .white
+        button.underlineText()
+        button.addTarget(self, action: #selector(requestCodeButtonTapped), for: .touchUpInside)
+        button.isHidden = true
+        button.isUserInteractionEnabled = false
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     private lazy var gradientTextField: GradientTextField = {
         let textField = GradientTextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -66,10 +91,55 @@ class VerificationViewController: UIViewController {
     
     private lazy var gradientTextFields: [GradientTextField] = (0...5).map { _ in GradientTextField() }
     
+    private lazy var proceedButton: GradientButton = {
+        let button = GradientButton()
+        if isRegistered {
+            button.setTitle(String(localized: "Log In"), for: .normal)
+        } else {
+            button.setTitle(String(localized: "Sign Up"), for: .normal)
+        }
+        
+        if let customFont = UIFont(name: "Inter", size: 16) {
+            button.titleLabel?.font = customFont
+        } else {
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        }
+        button.addTarget(self, action: #selector(proceedButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    private lazy var missingCodeButton: UIButton = {
+        let button = UIButton()
+        
+        button.setTitle(String(localized: "I didn't get a code!"), for: .normal)
+        if let customFont = UIFont(name: "Inter", size: 14) {
+            button.titleLabel?.font = customFont
+        } else {
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        }
+        button.titleLabel?.textAlignment = .center
+        button.titleLabel?.numberOfLines = 0
+        button.titleLabel?.textColor = .white
+        button.underlineText()
+        button.addTarget(self, action: #selector(missingCodeButtonTapped), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
     
     
     // MARK: Actions
-
+    @objc func proceedButtonTapped() {
+        print("ProceedButtonTapped")
+    }
+    
+    @objc func requestCodeButtonTapped() {
+        print("Request Code Button Tapped")
+    }
+    
+    @objc func missingCodeButtonTapped() {
+        let viewController = MissingCodeViewController()
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
     
     // MARK: Lifecycle
     init(isRegistered: Bool) {
@@ -108,6 +178,9 @@ class VerificationViewController: UIViewController {
         view.addSubview(titleLabel)
         view.addSubview(subtitleLabel)
         view.addSubview(countdownLabel)
+        view.addSubview(proceedButton)
+        view.addSubview(requestCodeButton)
+        view.addSubview(missingCodeButton)
         for textField in gradientTextFields {
             view.addSubview(textField)
         }
@@ -133,7 +206,12 @@ class VerificationViewController: UIViewController {
             countdownLabel.topAnchor.constraint(equalTo: subtitleLabel.bottomAnchor, constant: 50),
             countdownLabel.heightAnchor.constraint(equalToConstant: 50),
             countdownLabel.leadingAnchor.constraint(equalTo: safeAreaGuide.leadingAnchor, constant: 108),
-            countdownLabel.trailingAnchor.constraint(equalTo: safeAreaGuide.trailingAnchor, constant: -108)
+            countdownLabel.trailingAnchor.constraint(equalTo: safeAreaGuide.trailingAnchor, constant: -108),
+            
+            requestCodeButton.topAnchor.constraint(equalTo: countdownLabel.topAnchor),
+            requestCodeButton.heightAnchor.constraint(equalTo: countdownLabel.heightAnchor),
+            requestCodeButton.leadingAnchor.constraint(equalTo: countdownLabel.leadingAnchor),
+            requestCodeButton.trailingAnchor.constraint(equalTo: countdownLabel.trailingAnchor),
         ])
         
         let sidePadding: CGFloat = 20
@@ -146,7 +224,22 @@ class VerificationViewController: UIViewController {
             gradientTextFields[0].leadingAnchor.constraint(equalTo: safeAreaGuide.leadingAnchor, constant: sidePadding),
             gradientTextFields[0].centerYAnchor.constraint(equalTo: safeAreaGuide.centerYAnchor),
             gradientTextFields[0].heightAnchor.constraint(equalToConstant: cellWidth),
-            gradientTextFields[0].widthAnchor.constraint(equalToConstant: cellWidth)
+            gradientTextFields[0].widthAnchor.constraint(equalToConstant: cellWidth),
+            
+            //proceedButton.topAnchor.constraint(equalTo: safeAreaGuide.topAnchor, constant: 437),
+            proceedButton.topAnchor.constraint(equalTo: gradientTextFields[0].bottomAnchor, constant: 25),
+            //proceedButton.heightAnchor.constraint(equalToConstant: 50),
+            proceedButton.heightAnchor.constraint(equalToConstant: 56),
+            //proceedButton.leadingAnchor.constraint(equalTo: safeAreaGuide.leadingAnchor, constant: 78),
+            //proceedButton.trailingAnchor.constraint(equalTo: safeAreaGuide.trailingAnchor, constant: -78)
+            proceedButton.leadingAnchor.constraint(equalTo: safeAreaGuide.leadingAnchor, constant: 35),
+            proceedButton.trailingAnchor.constraint(equalTo: safeAreaGuide.trailingAnchor, constant: -35),
+            
+            //missingCodeButton.topAnchor.constraint(equalTo: safeAreaGuide.topAnchor, constant: 518),
+            missingCodeButton.topAnchor.constraint(equalTo: proceedButton.bottomAnchor, constant: 25),
+            missingCodeButton.heightAnchor.constraint(equalToConstant: 20),
+            missingCodeButton.leadingAnchor.constraint(equalTo: safeAreaGuide.leadingAnchor, constant: 132),
+            missingCodeButton.trailingAnchor.constraint(equalTo: safeAreaGuide.trailingAnchor, constant: -132)
         ])
         
         for i in 1...5 {
@@ -166,12 +259,19 @@ class VerificationViewController: UIViewController {
     }
     
     func startTimer() {
+        self.countdownLabel.isHidden = false
+        self.requestCodeButton.isHidden = true
+        self.requestCodeButton.isUserInteractionEnabled = false
+        
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [unowned self] timer in
             if timeLeft > 0 {
                 timeLeft -= 1
                 countdownLabel.text = String(localized: "You can request a new code in \(timeLeft.secondsToTime)")
             } else {
                 stopTimer()
+                self.countdownLabel.isHidden = true
+                self.requestCodeButton.isHidden = false
+                self.requestCodeButton.isUserInteractionEnabled = true
             }
         }
     }

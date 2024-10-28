@@ -16,9 +16,12 @@
 		8E058FAE2CCE5FCF005ED9A9 /* Inter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E058FAD2CCE5FCF005ED9A9 /* Inter.ttf */; };
 		8E058FB02CCE674B005ED9A9 /* GradientTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E058FAF2CCE674B005ED9A9 /* GradientTextField.swift */; };
 		8E058FB22CCED9D5005ED9A9 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E058FB12CCED9D5005ED9A9 /* VerificationViewController.swift */; };
+		8E058FB42CD00C13005ED9A9 /* GradientSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E058FB32CD00C13005ED9A9 /* GradientSecureTextField.swift */; };
+		8E058FB62CD00D38005ED9A9 /* GradientPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E058FB52CD00D38005ED9A9 /* GradientPicker.swift */; };
+		8E60AB622CD01A6F006B5363 /* GradientBorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E60AB612CD01A6F006B5363 /* GradientBorderedButton.swift */; };
 		8EA01B6C2CCDB02900693B90 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA01B6B2CCDB02900693B90 /* UIViewController.swift */; };
+		8EB23F902CD0271E00EB3582 /* PhoneNumberKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8EB23F8F2CD0271E00EB3582 /* PhoneNumberKit */; };
 		8ED34B4E2CCD2B3000AA299C /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B402CCD2B3000AA299C /* GradientButton.swift */; };
-		8ED34B4F2CCD2B3000AA299C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B442CCD2B3000AA299C /* LogInViewController.swift */; };
 		8ED34B502CCD2B3000AA299C /* MissingCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B452CCD2B3000AA299C /* MissingCodeViewController.swift */; };
 		8ED34B512CCD2B3000AA299C /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B462CCD2B3000AA299C /* PasscodeViewController.swift */; };
 		8ED34B522CCD2B3000AA299C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED34B472CCD2B3000AA299C /* SignUpViewController.swift */; };
@@ -46,12 +49,14 @@
 		8E058FAD2CCE5FCF005ED9A9 /* Inter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inter.ttf; sourceTree = "<group>"; };
 		8E058FAF2CCE674B005ED9A9 /* GradientTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientTextField.swift; sourceTree = "<group>"; };
 		8E058FB12CCED9D5005ED9A9 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
+		8E058FB32CD00C13005ED9A9 /* GradientSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientSecureTextField.swift; sourceTree = "<group>"; };
+		8E058FB52CD00D38005ED9A9 /* GradientPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientPicker.swift; sourceTree = "<group>"; };
+		8E60AB612CD01A6F006B5363 /* GradientBorderedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBorderedButton.swift; sourceTree = "<group>"; };
 		8EA01B6B2CCDB02900693B90 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		8ED34AF92CCC5CB500AA299C /* sign-up-screen-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sign-up-screen-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED34B3F2CCD2B3000AA299C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8ED34B402CCD2B3000AA299C /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		8ED34B412CCD2B3000AA299C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8ED34B442CCD2B3000AA299C /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		8ED34B452CCD2B3000AA299C /* MissingCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingCodeViewController.swift; sourceTree = "<group>"; };
 		8ED34B462CCD2B3000AA299C /* PasscodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
 		8ED34B472CCD2B3000AA299C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EB23F902CD0271E00EB3582 /* PhoneNumberKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +153,9 @@
 			children = (
 				8ED34B402CCD2B3000AA299C /* GradientButton.swift */,
 				8E058FAF2CCE674B005ED9A9 /* GradientTextField.swift */,
+				8E60AB612CD01A6F006B5363 /* GradientBorderedButton.swift */,
+				8E058FB32CD00C13005ED9A9 /* GradientSecureTextField.swift */,
+				8E058FB52CD00D38005ED9A9 /* GradientPicker.swift */,
 				8E058FA92CCE4B6C005ED9A9 /* LabelWithPadding.swift */,
 			);
 			path = "Custom Views";
@@ -156,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				8ED34B4A2CCD2B3000AA299C /* WelcomeViewController.swift */,
-				8ED34B442CCD2B3000AA299C /* LogInViewController.swift */,
 				8E058FA72CCE47F2005ED9A9 /* SuccessViewController.swift */,
 				8ED34B452CCD2B3000AA299C /* MissingCodeViewController.swift */,
 				8ED34B462CCD2B3000AA299C /* PasscodeViewController.swift */,
@@ -193,6 +201,7 @@
 			);
 			name = "sign-up-screen-sample";
 			packageProductDependencies = (
+				8EB23F8F2CD0271E00EB3582 /* PhoneNumberKit */,
 			);
 			productName = "sign-up-screen-sample";
 			productReference = 8ED34AF92CCC5CB500AA299C /* sign-up-screen-sample.app */;
@@ -222,6 +231,9 @@
 			);
 			mainGroup = 8ED34AF02CCC5CB500AA299C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8EB23F8E2CD0271E00EB3582 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8ED34AFA2CCC5CB500AA299C /* Products */;
 			projectDirPath = "";
@@ -258,13 +270,15 @@
 				8E058FB02CCE674B005ED9A9 /* GradientTextField.swift in Sources */,
 				8ED34B4E2CCD2B3000AA299C /* GradientButton.swift in Sources */,
 				8ED34B612CCD2B4100AA299C /* AppDelegate.swift in Sources */,
+				8E058FB42CD00C13005ED9A9 /* GradientSecureTextField.swift in Sources */,
 				8ED34B622CCD2B4100AA299C /* SceneDelegate.swift in Sources */,
-				8ED34B4F2CCD2B3000AA299C /* LogInViewController.swift in Sources */,
 				8E058FA62CCE45E0005ED9A9 /* UIButton.swift in Sources */,
 				8ED34B682CCD2BA800AA299C /* VerificationService.swift in Sources */,
 				8ED34B502CCD2B3000AA299C /* MissingCodeViewController.swift in Sources */,
 				8ED34B712CCD3E9500AA299C /* FoundationExt.swift in Sources */,
+				8E60AB622CD01A6F006B5363 /* GradientBorderedButton.swift in Sources */,
 				8ED34B512CCD2B3000AA299C /* PasscodeViewController.swift in Sources */,
+				8E058FB62CD00D38005ED9A9 /* GradientPicker.swift in Sources */,
 				8ED34B522CCD2B3000AA299C /* SignUpViewController.swift in Sources */,
 				8E058FB22CCED9D5005ED9A9 /* VerificationViewController.swift in Sources */,
 				8ED34B532CCD2B3000AA299C /* StyleGuide.swift in Sources */,
@@ -504,6 +518,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8EB23F8E2CD0271E00EB3582 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/PhoneNumberKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8EB23F8F2CD0271E00EB3582 /* PhoneNumberKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EB23F8E2CD0271E00EB3582 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */;
+			productName = PhoneNumberKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8ED34AF12CCC5CB500AA299C /* Project object */;
 }

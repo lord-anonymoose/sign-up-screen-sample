@@ -45,10 +45,12 @@ class SuccessViewController: UIViewController {
     }()
     
     
+    
     // MARK: Actions
     @objc func proceedButtonTapped() {
         print("Proceed Button tapped")
     }
+    
     
     
     // MARK: Lifecycle

@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Choose an Option" : {
+
+    },
     "Choose your security" : {
       "localizations" : {
         "en" : {
@@ -39,6 +42,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Введите код из смс, что мы отправили вам"
+          }
+        }
+      }
+    },
+    "I didn't get a code!" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Я не получил код!"
           }
         }
       }
@@ -115,6 +128,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Войти в приложение"
+          }
+        }
+      }
+    },
+    "Request new code" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Запросить новый код"
           }
         }
       }

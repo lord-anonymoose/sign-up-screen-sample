@@ -9,7 +9,7 @@ import UIKit
 
 
 
-class GradientTextField: UITextField {
+class GradientBorderedButton: UIButton {
     private let gradientLayer = CAGradientLayer()
     private let borderLayer = CAShapeLayer()
     private let borderWidth: CGFloat = 0.93
@@ -28,8 +28,8 @@ class GradientTextField: UITextField {
     
     func setupUI() {
         clipsToBounds = true
-        self.textColor = .white
-        self.textAlignment = .center
+        //self.textColor = .white
+        //self.textAlignment = .center
         layer.cornerRadius = 3.71
         self.translatesAutoresizingMaskIntoConstraints = false
     }
