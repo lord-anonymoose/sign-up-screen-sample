@@ -12,8 +12,8 @@ class SuccessViewController: UIViewController {
     
     
     // MARK: Subviews
-    private lazy var successLabel: LabelWithPadding = {
-        let label = LabelWithPadding()
+    private lazy var successLabel: UILabel = {
+        let label = UILabel()
         label.text = String(localized: "You have successfully created code for the application")
         label.textColor = .white
         label.font = .systemFont(ofSize: 16, weight: .regular)
@@ -48,7 +48,8 @@ class SuccessViewController: UIViewController {
     
     // MARK: Actions
     @objc func proceedButtonTapped() {
-        print("Proceed Button tapped")
+        let viewController = MainViewController()
+        self.navigationController?.setViewControllers([viewController], animated: true)
     }
     
     

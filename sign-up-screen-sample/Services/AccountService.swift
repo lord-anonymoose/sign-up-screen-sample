@@ -14,17 +14,21 @@ final class AccountService {
     
     private init() { }
     
-    let shared = AccountService()
+    static let shared = AccountService()
     
-    private func validatePhoneNumber(_ phoneNumber: String) -> Bool {
+    func validatePhoneNumber(_ phoneNumber: String) -> Bool {
         return true
     }
     
-    private func tryLogIn(phoneNumber: String, code: String) -> Bool {
+    func validateVerificationCode(_ code: String) -> Bool {
         return true
     }
     
-    private func trySetPasscode(phoneNumber: String, passcode: String) -> Bool {
+    func tryLogIn(phoneNumber: String, code: String) -> Bool {
+        return true
+    }
+    
+    func trySetPasscode(phoneNumber: String, passcode: String) -> Bool {
         return true
     }
 }

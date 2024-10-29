@@ -45,7 +45,18 @@ class PasscodeViewController: UIViewController {
         textField.actionEnabled = false
         return textField
     }()
-        
+    
+    // Button that overlays passcodeTextField so user can't copy, speak or spell content from it
+    // Reference: https://stackoverflow.com/questions/79136657/disable-autofill-speak-and-spell-for-uitextfield
+    private lazy var passcodeBlockButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("", for: .normal)
+        button.backgroundColor = .clear
+        button.addTarget(self, action: #selector(passcodeBlockButtonTapped), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     private lazy var grayCircles: [UIView] = (0...3).map { _ in
         let circle = UIView()
         circle.backgroundColor = UIColor(hex: "#999999") ?? .systemGray
@@ -62,9 +73,49 @@ class PasscodeViewController: UIViewController {
         return circle
     }
     
+    private lazy var proceedButton: GradientButton = {
+        let button = GradientButton()
+        let title = String(localized: "Proceed")
+        button.setTitle(title, for: .normal)
+        button.titleLabel?.font = UIFont(name: "Urbanist", size: 16) ?? UIFont.systemFont(ofSize: 19, weight: .regular)
+        button.layer.cornerRadius = 25
+        button.addTarget(self, action: #selector(proceedButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    private lazy var skipButton: UIButton = {
+        let button = UIButton()
+        let title = String(localized: "Skip")
+        button.setTitle(title, for: .normal)
+        button.titleLabel?.font = UIFont(name: "Urbanist", size: 16) ?? UIFont.systemFont(ofSize: 19, weight: .regular)
+        button.layer.cornerRadius = 25
+        button.backgroundColor = UIColor(hex: "#181528")
+        button.addTarget(self, action: #selector(skipButtonTapped), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     
     
     // MARK: Actions
+    @objc func passcodeBlockButtonTapped() {
+        if passcodeTextField.isFirstResponder {
+            passcodeTextField.resignFirstResponder()
+        } else {
+            passcodeTextField.becomeFirstResponder()
+        }
+    }
+    
+    @objc func proceedButtonTapped() {
+        let viewController = SuccessViewController()
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    @objc func skipButtonTapped() {
+        let viewController = MainViewController()
+        self.navigationController?.setViewControllers([viewController], animated: true)
+    }
+
     
     
     // MARK: Lifecycle
@@ -76,7 +127,8 @@ class PasscodeViewController: UIViewController {
         setNavigationBarTitle(String(localized: "Passcode"))
         addSubviews()
         setupConstraints()
-        selectTextField()
+        passcodeTextField.becomeFirstResponder()
+        disableProceedButton()
     }
     
     // MARK: Private
@@ -84,6 +136,7 @@ class PasscodeViewController: UIViewController {
         view.addSubview(titleLabel)
         view.addSubview(subtitleLabel)
         view.addSubview(passcodeTextField)
+        view.addSubview(passcodeBlockButton)
         
         for circle in grayCircles {
             view.addSubview(circle)
@@ -92,6 +145,9 @@ class PasscodeViewController: UIViewController {
         for circle in gradientCircles {
             view.addSubview(circle)
         }
+        
+        view.addSubview(proceedButton)
+        view.addSubview(skipButton)
     }
     
     
@@ -101,7 +157,6 @@ class PasscodeViewController: UIViewController {
         let circleHeight: CGFloat = 10
         let textFieldWidth = view.frame.width - 105*2
         let circlePadding = (textFieldWidth - circleHeight*4) / 5
-        //print(passcodeTextField.fr)
         
         // Constraints that are provided in Figma design yet don't look good on real devices are commented and replaced
         NSLayoutConstraint.activate([
@@ -119,9 +174,24 @@ class PasscodeViewController: UIViewController {
             
             //passcodeTextField.topAnchor.constraint(equalTo: safeAreaGuide.topAnchor, constant: 301),
             passcodeTextField.topAnchor.constraint(equalTo: subtitleLabel.bottomAnchor, constant: 50),
-            passcodeTextField.heightAnchor.constraint(equalToConstant: 52),
+            passcodeTextField.heightAnchor.constraint(equalToConstant: 56),
             passcodeTextField.leadingAnchor.constraint(equalTo: safeAreaGuide.leadingAnchor, constant: 105),
             passcodeTextField.trailingAnchor.constraint(equalTo: safeAreaGuide.trailingAnchor, constant: -105),
+            
+            passcodeBlockButton.topAnchor.constraint(equalTo: passcodeTextField.topAnchor),
+            passcodeBlockButton.bottomAnchor.constraint(equalTo: passcodeTextField.bottomAnchor),
+            passcodeBlockButton.leadingAnchor.constraint(equalTo: passcodeTextField.leadingAnchor),
+            passcodeBlockButton.trailingAnchor.constraint(equalTo: passcodeTextField.trailingAnchor),
+            
+            proceedButton.topAnchor.constraint(equalTo: passcodeBlockButton.bottomAnchor, constant: 50),
+            proceedButton.heightAnchor.constraint(equalToConstant: 50),
+            proceedButton.leadingAnchor.constraint(equalTo: safeAreaGuide.leadingAnchor, constant: 35),
+            proceedButton.trailingAnchor.constraint(equalTo: safeAreaGuide.trailingAnchor, constant: -35),
+            
+            skipButton.topAnchor.constraint(equalTo: proceedButton.bottomAnchor, constant: 15),
+            skipButton.heightAnchor.constraint(equalTo: proceedButton.heightAnchor),
+            skipButton.leadingAnchor.constraint(equalTo: proceedButton.leadingAnchor),
+            skipButton.trailingAnchor.constraint(equalTo: proceedButton.trailingAnchor),
             
             grayCircles[0].centerYAnchor.constraint(equalTo: passcodeTextField.centerYAnchor),
             grayCircles[0].heightAnchor.constraint(equalToConstant: circleHeight),
@@ -177,8 +247,14 @@ class PasscodeViewController: UIViewController {
         }
     }
     
-    private func selectTextField() {
-        passcodeTextField.becomeFirstResponder()
+    private func disableProceedButton() {
+        proceedButton.layer.opacity = 0.5
+        proceedButton.isUserInteractionEnabled = false
+    }
+    
+    private func enableProceedButton() {
+        proceedButton.layer.opacity = 1.0
+        proceedButton.isUserInteractionEnabled = true
     }
 }
 
@@ -197,6 +273,15 @@ extension PasscodeViewController: UITextFieldDelegate {
         guard let stringRange = Range(range, in: currentText) else { return false }
         let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
         guard updatedText.count < 5 else { return false }
+        if updatedText.count == 4 {
+            if !proceedButton.isUserInteractionEnabled {
+                enableProceedButton()
+            }
+        } else {
+            if proceedButton.isUserInteractionEnabled {
+                disableProceedButton()
+            }
+        }
         showGradientCircles(updatedText.count)
         textField.text = updatedText
         return false

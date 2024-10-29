@@ -55,6 +55,7 @@ final class EnterPhoneViewController: UIViewController {
         textField.font = phoneNumberFont
         textField.textColor = .white
         textField.layer.cornerRadius = 10
+        textField.keyboardType = .numberPad
         return textField
     }()
     
@@ -83,8 +84,17 @@ final class EnterPhoneViewController: UIViewController {
     
     // MARK: Actions
     @objc func proceedButtonTapped() {
-        let viewController = VerificationViewController(isRegistered: isRegistered)
-        self.navigationController?.pushViewController(viewController, animated: true)
+        let regionCode = selectedOption?.filter { "+0123456789".contains($0) } ?? ""
+        let phoneNumber = phoneTextField.text ?? ""
+        let fullPhoneNumber = "\(regionCode)\(phoneNumber)"
+        if AccountService.shared.validatePhoneNumber(phoneNumber) {
+            let viewController = VerificationViewController(isRegistered: isRegistered)
+            self.navigationController?.pushViewController(viewController, animated: true)
+        } else {
+            let title = String(localized: "Invalid phone number")
+            let description = String(localized: "Couldn't validate phone number you provided")
+            showAlert(title: title, description: description)
+        }
     }
     
     
@@ -110,6 +120,8 @@ final class EnterPhoneViewController: UIViewController {
         addSubviews()
         setupConstraints()
         setupMenu()
+        
+        phoneTextField.delegate = self
     }
     
     
@@ -189,5 +201,13 @@ final class EnterPhoneViewController: UIViewController {
             flagString.unicodeScalars.append(UnicodeScalar(base + scalar.value)!)
         }
         return flagString
+    }
+}
+
+extension EnterPhoneViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let allowedCharacters = CharacterSet.decimalDigits
+        let characterSet = CharacterSet(charactersIn: string)
+        return allowedCharacters.isSuperset(of: characterSet)
     }
 }

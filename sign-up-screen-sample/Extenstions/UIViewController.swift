@@ -42,4 +42,10 @@ extension UIViewController {
             .font: customFont
         ]
     }
+    
+    public func showAlert(title: String, description: String) {
+        let alert = UIAlertController(title: title, message: description, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: String(localized: "OK"), style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }

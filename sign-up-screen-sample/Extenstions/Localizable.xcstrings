@@ -33,8 +33,25 @@
         }
       }
     },
+    "Couldn't validate phone number you provided" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось валидировать предоставленный номер телефона"
+          }
+        }
+      }
+    },
     "Create app passcode" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Создать код приложения"
+          }
+        }
+      }
     },
     "Don't have an account?" : {
       "localizations" : {
@@ -69,10 +86,34 @@
       }
     },
     "Enter code" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ввести код"
+          }
+        }
+      }
+    },
+    "Error!" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка"
+          }
+        }
+      }
     },
     "Get code" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Получить код"
+          }
+        }
+      }
     },
     "I didn't get a code!" : {
       "localizations" : {
@@ -86,6 +127,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Я не получил код!"
+          }
+        }
+      }
+    },
+    "Invalid phone number" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Некорректный номер!"
           }
         }
       }
@@ -202,6 +253,16 @@
         }
       }
     },
+    "Proceed" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Продолжить"
+          }
+        }
+      }
+    },
     "Proceed to the app" : {
       "localizations" : {
         "en" : {
@@ -278,6 +339,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "SIS"
+          }
+        }
+      }
+    },
+    "Skip" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пропустить"
+          }
+        }
+      }
+    },
+    "The code you provided is wrong" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введен неверный код"
           }
         }
       }

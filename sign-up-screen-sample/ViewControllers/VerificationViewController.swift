@@ -83,14 +83,9 @@ class VerificationViewController: UIViewController {
         return button
     }()
     
-    private lazy var gradientTextField: GradientTextField = {
-        let textField = GradientTextField()
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        return textField
-    }()
-    
     private lazy var gradientTextFields: [GradientTextField] = (0...5).map { _ in
         let textField = GradientTextField()
+        textField.keyboardType = .numberPad
         textField.font = UIFont(name: "Inter", size: 22.24) ?? UIFont.systemFont(ofSize: 22.24, weight: .regular)
         textField.textColor = .white
         return textField
@@ -134,7 +129,18 @@ class VerificationViewController: UIViewController {
     
     // MARK: Actions
     @objc func proceedButtonTapped() {
-        print("ProceedButtonTapped")
+        var code = ""
+        for gradientTextField in gradientTextFields {
+            code.append(gradientTextField.text ?? "")
+        }
+        if AccountService.shared.validateVerificationCode(code) {
+            let viewController = PasscodeViewController()
+            self.navigationController?.pushViewController(viewController, animated: true)
+        } else {
+            let title = String(localized: "Error!")
+            let description = String(localized: "The code you provided is wrong")
+            showAlert(title: title, description: description)
+        }
     }
     
     @objc func requestCodeButtonTapped() {

@@ -67,10 +67,10 @@ class GradientTextField: UITextField {
     }
     
     override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
-        if !actionEnabled {
-            return false
-        } else {
+        if actionEnabled {
             return super.canPerformAction(action, withSender: sender)
+        } else {
+            return false
         }
     }
     
