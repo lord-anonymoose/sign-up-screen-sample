@@ -46,14 +46,14 @@ class PasscodeViewController: UIViewController {
     private lazy var grayCircles: [UIView] = (0...3).map { _ in
         let circle = UIView()
         circle.backgroundColor = UIColor(hex: "#999999") ?? .systemGray
-        circle.layer.cornerRadius = 10
+        circle.layer.cornerRadius = 5
         circle.translatesAutoresizingMaskIntoConstraints = false
         return circle
     }
     
     private lazy var gradientCircles: [GradientButton] = (0...3).map { _ in
         let circle = GradientButton()
-        circle.layer.cornerRadius = 10
+        circle.layer.cornerRadius = 5
         circle.isUserInteractionEnabled = true
         circle.isHidden = true
         return circle
@@ -95,9 +95,9 @@ class PasscodeViewController: UIViewController {
     private func setupConstraints() {
         let safeAreaGuide = view.safeAreaLayoutGuide
         
-        let circleHeight: CGFloat = 20
+        let circleHeight: CGFloat = 10
         let textFieldWidth = view.frame.width - 105*2
-        let circlePadding = (textFieldWidth - 20*4) / 5
+        let circlePadding = (textFieldWidth - circleHeight*4) / 5
         //print(passcodeTextField.fr)
         
         // Constraints that are provided in Figma design yet don't look good on real devices are commented and replaced
@@ -192,7 +192,6 @@ extension PasscodeViewController: UITextFieldDelegate {
         guard updatedText.count < 5 else { return false }
         showGradientCircles(updatedText.count)
         textField.text = updatedText
-        print(textField.text)
         return false
     }
 }

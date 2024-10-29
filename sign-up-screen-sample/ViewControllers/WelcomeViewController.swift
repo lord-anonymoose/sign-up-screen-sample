@@ -102,6 +102,8 @@ class WelcomeViewController: UIViewController {
         navigationController?.pushViewController(viewController, animated: true)
     }
     
+    
+    
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,6 +112,7 @@ class WelcomeViewController: UIViewController {
         addSubviews()
         setupConstraints()
     }
+    
     
     
     // MARK: Private
