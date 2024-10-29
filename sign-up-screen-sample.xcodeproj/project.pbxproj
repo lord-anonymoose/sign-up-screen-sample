@@ -165,9 +165,9 @@
 				8ED34B4A2CCD2B3000AA299C /* WelcomeViewController.swift */,
 				8ED34B472CCD2B3000AA299C /* EnterPhoneViewController.swift */,
 				8E058FB12CCED9D5005ED9A9 /* VerificationViewController.swift */,
-				8E058FA72CCE47F2005ED9A9 /* SuccessViewController.swift */,
 				8ED34B452CCD2B3000AA299C /* MissingCodeViewController.swift */,
 				8ED34B462CCD2B3000AA299C /* PasscodeViewController.swift */,
+				8E058FA72CCE47F2005ED9A9 /* SuccessViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";

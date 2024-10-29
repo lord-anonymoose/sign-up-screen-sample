@@ -33,6 +33,9 @@
         }
       }
     },
+    "Create app passcode" : {
+
+    },
     "Don't have an account?" : {
       "localizations" : {
         "en" : {
@@ -64,6 +67,9 @@
           }
         }
       }
+    },
+    "Enter code" : {
+
     },
     "Get code" : {
 
