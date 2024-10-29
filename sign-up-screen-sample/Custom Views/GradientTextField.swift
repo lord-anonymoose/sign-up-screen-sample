@@ -13,7 +13,8 @@ class GradientTextField: UITextField {
     private let gradientLayer = CAGradientLayer()
     private let borderLayer = CAShapeLayer()
     private let borderWidth: CGFloat = 0.93
-
+    var actionEnabled: Bool = true
+    
     required init() {
         super.init(frame: .zero)
         setupUI()
@@ -57,11 +58,27 @@ class GradientTextField: UITextField {
         borderLayer.strokeColor = UIColor.black.cgColor
         gradientLayer.mask = borderLayer
     }
-
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         if !bounds.isEmpty {
             updateBorderPath()
         }
+    }
+    
+    override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
+        if !actionEnabled {
+            return false
+        } else {
+            return super.canPerformAction(action, withSender: sender)
+        }
+    }
+    
+    override func selectionRects(for range: UITextRange) -> [UITextSelectionRect] {
+        return []
+    }
+    
+    override func caretRect(for position: UITextPosition) -> CGRect {
+        return .zero
     }
 }

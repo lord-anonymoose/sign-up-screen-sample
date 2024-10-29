@@ -40,6 +40,9 @@ class PasscodeViewController: UIViewController {
         textField.layer.cornerRadius = 26
         textField.textColor = .clear
         textField.tintColor = .clear
+        textField.keyboardType = .numberPad
+        textField.accessibilityLabel = ""
+        textField.actionEnabled = false
         return textField
     }()
         
@@ -73,8 +76,8 @@ class PasscodeViewController: UIViewController {
         setNavigationBarTitle(String(localized: "Passcode"))
         addSubviews()
         setupConstraints()
+        selectTextField()
     }
-    
     
     // MARK: Private
     private func addSubviews() {
@@ -173,6 +176,10 @@ class PasscodeViewController: UIViewController {
             j -= 1
         }
     }
+    
+    private func selectTextField() {
+        passcodeTextField.becomeFirstResponder()
+    }
 }
 
 
@@ -193,5 +200,14 @@ extension PasscodeViewController: UITextFieldDelegate {
         showGradientCircles(updatedText.count)
         textField.text = updatedText
         return false
+    }
+    
+    override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
+        if action == #selector(copy(_:)) ||
+           action == #selector(select(_:)) ||
+           action == #selector(selectAll(_:)) {
+            return false
+        }
+        return super.canPerformAction(action, withSender: sender)
     }
 }
